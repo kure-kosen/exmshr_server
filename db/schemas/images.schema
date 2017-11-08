@@ -1,0 +1,10 @@
+create_table :images do |t|
+  t.integer :exam_id, null: false
+  t.string :path, null: false
+
+  t.timestamps
+end
+
+add_index :images, :exam_id
+
+add_foreign_key :images, :exams
