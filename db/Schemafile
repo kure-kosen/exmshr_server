@@ -1,0 +1,6 @@
+require 'schemas/comments.schema'
+require 'schemas/contents.schema'
+require 'schemas/exams.schema'
+require 'schemas/images.schema'
+require 'schemas/ratings.schema'
+require 'schemas/users.schema'

@@ -1,5 +1,5 @@
 create_table :exams do |t|
-  t.integer :user_id, null: false
+  t.integer :user_id, null: false, limit: 8
   t.string :name, null: false
   t.integer :kind, null: false
   t.integer :year
