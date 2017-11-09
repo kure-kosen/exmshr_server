@@ -1,0 +1,11 @@
+create_table :ratings do |t|
+  t.integer :exam_id, null: false
+  t.integer :good, null: false, default: 0
+  t.integer :bad, null: false, default: 0
+
+  t.timestamps
+end
+
+add_index :ratings, :exam_id
+
+add_foreign_key :ratings, :exams

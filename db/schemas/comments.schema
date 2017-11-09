@@ -1,0 +1,9 @@
+create_table :comments do |t|
+  t.integer :exam_id, null: false
+
+  t.timestamps
+end
+
+add_index :comments, :exam_id
+
+add_foreign_key :comments, :exams 
