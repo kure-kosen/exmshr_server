@@ -1,5 +1,5 @@
 create_table :images do |t|
-  t.integer :exam_id, null: false
+  t.integer :exam_id, null: false, limit: 8
   t.string :path, null: false
 
   t.timestamps

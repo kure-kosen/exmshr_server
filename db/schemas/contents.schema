@@ -1,6 +1,6 @@
 create_table :contents do |t|
-  t.integer :user_id, null: false
-  t.integer :comment_id, null: false
+  t.integer :user_id, null: false, limit: 8
+  t.integer :comment_id, null: false, limit: 8
   t.text :content, null: false
 
   t.timestamps
