@@ -1,5 +1,5 @@
 class ExamsController < ApplicationController
-  before_action :set_exam, only: [:show, :edit, :update, :destroy]
+  before_action :set_exam, only: %i[show edit update destroy]
 
   # GET /exams
   # GET /exams.json
@@ -9,8 +9,7 @@ class ExamsController < ApplicationController
 
   # GET /exams/1
   # GET /exams/1.json
-  def show
-  end
+  def show; end
 
   # GET /exams/new
   def new
@@ -18,8 +17,7 @@ class ExamsController < ApplicationController
   end
 
   # GET /exams/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /exams
   # POST /exams.json
@@ -62,13 +60,14 @@ class ExamsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_exam
-      @exam = Exam.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def exam_params
-      params.fetch(:exam, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_exam
+    @exam = Exam.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def exam_params
+    params.fetch(:exam, {})
+  end
 end
